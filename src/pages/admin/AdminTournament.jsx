@@ -1,4 +1,6 @@
 import { Link, useParams, useSearchParams } from 'react-router-dom'
+import { useState } from 'react'
+import { db } from '../../lib/db'
 import { useAuth, useTournamentData } from '../../hooks/useTournament'
 import { ErrorBox, Loading, NotFound } from '../../components/Status'
 import AdminBar from './AdminBar'
@@ -15,6 +17,32 @@ const TABS = [
   { id: 'ajustes', label: 'Penalizações', C: AdjustmentsTab },
   { id: 'definicoes', label: 'Definições', C: SettingsTab },
 ]
+
+function TvPointsToggle({ tournament }) {
+  const [busy, setBusy] = useState(false)
+  const shown = !!tournament.settings.tvShowPoints
+  async function toggle() {
+    if (!shown && !window.confirm('Mostrar os pontos no ecrã da TV?')) return
+    setBusy(true)
+    try {
+      await db.saveTournament({ ...tournament, settings: { ...tournament.settings, tvShowPoints: !shown } })
+    } catch (err) {
+      window.alert(`Não foi possível mudar: ${err.message}`)
+    } finally {
+      setBusy(false)
+    }
+  }
+  return (
+    <div className={`tv-toggle${shown ? ' on' : ''}`}>
+      <span>
+        <strong>Pontos na TV:</strong> {shown ? 'visíveis' : 'ocultos'}
+      </span>
+      <button type="button" className={`btn small${shown ? '' : ' primary'}`} onClick={toggle} disabled={busy} aria-pressed={shown}>
+        {shown ? 'Ocultar pontos' : 'Mostrar pontos'}
+      </button>
+    </div>
+  )
+}
 
 export default function AdminTournament() {
   const { tid } = useParams()
@@ -42,6 +70,7 @@ export default function AdminTournament() {
           <Link className="btn ghost small" to={`/admin/t/${tid}/imprimir`}>Imprimir folhas de jogo</Link>
           <button type="button" className="btn ghost small" onClick={async () => (await import('../../lib/exportXlsx')).exportTournament(data)}>Exportar Excel</button>
         </div>
+        <TvPointsToggle tournament={data.tournament} />
         <nav className="tabs" role="tablist">
           {TABS.map((t) => (
             <button

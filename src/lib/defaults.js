@@ -22,6 +22,7 @@ export function defaultSettings() {
     pointsPerGame: 120,
     gamesPerRound: 4,
     roundsPerDay: '',
+    tvShowPoints: false,
     tiebreakers: ['h2h', 'wins', 'best'],
     prizes: [
       { place: '1', label: '' },

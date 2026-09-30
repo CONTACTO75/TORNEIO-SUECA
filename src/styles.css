@@ -209,6 +209,9 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--felt); outl
 .hint.warn { background: #fdf5e0; border-color: var(--gold); }
 
 /* Gestão */
+.tv-toggle { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem 1rem; margin: 0.25rem 0 1rem; padding: 0.6rem 0.9rem; border-radius: var(--r); background: var(--felt-deep); color: #fff; }
+.tv-toggle.on { background: #fdf5e0; color: var(--ink); box-shadow: 0 0 0 1px var(--gold); }
+.tv-toggle .btn.primary { background: #fff; color: var(--felt-deep); border-color: #fff; }
 .admin-tools { display: flex; flex-wrap: wrap; gap: 0.4rem; padding: 1rem 0 0.5rem; }
 .tabs { display: flex; gap: 0.25rem; border-bottom: 2px solid var(--line); overflow-x: auto; margin-bottom: 1.25rem; }
 .tabs button { font: inherit; font-weight: 600; background: none; border: 0; padding: 0.7rem 1rem; color: var(--muted); cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px; white-space: nowrap; }
@@ -306,7 +309,7 @@ body.tv-body { background: var(--felt-deep); }
 .tv-table { font-size: 0.55em; color: #7fa594; border: 1px solid var(--felt-line); border-radius: 4px; text-align: center; }
 .tv-score { text-align: center; font-variant-numeric: tabular-nums; white-space: nowrap; }
 li:not(.done) .tv-score { font-size: 0.6em; color: #7fa594; }
-.tv-round-list li.done .tv-score { font-size: 0.8em; }
+.tv-round-list li.done .tv-score { font-size: 0.8em; color: #9fd9b8; }
 .tv-round-list li.tv-bye { display: block; font-size: clamp(0.8rem, 2vh, 1.6rem); }
 .tv-legend { margin: 0.5vh 0 0; font-size: 1.4vh; color: #7fa594; }
 .tv:has(.tv-round-list) .tv-grid { grid-template-columns: 1.6fr 1fr; }

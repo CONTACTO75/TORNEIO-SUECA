@@ -51,6 +51,8 @@ export default function TvMode() {
   const cur = currentRound(matches)
   const prog = progress(matches)
   const finished = prog.total > 0 && prog.done === prog.total
+  // Por omissão a TV só mostra a ordem; a organização revela os pontos na gestão.
+  const showPts = !!tournament.settings.tvShowPoints
   const roundMatches = matches.filter((m) => m.round === cur).sort((a, b) => (a.tableNo ?? 999) - (b.tableNo ?? 999))
   const visible = rows.slice((page % pages) * ROWS_PER_PAGE, (page % pages + 1) * ROWS_PER_PAGE)
 
@@ -82,7 +84,7 @@ export default function TvMode() {
                     <small>{playersOf(r.team)}</small>
                   </td>
                   <td className="tv-played">{r.played}J</td>
-                  <td className="tv-pts">{r.total}</td>
+                  {showPts && <td className="tv-pts">{r.total}</td>}
                 </tr>
               ))}
             </tbody>
@@ -97,17 +99,19 @@ export default function TvMode() {
               {roundMatches.map((m) => {
                 if (!m.awayId) return <li key={m.id} className="tv-bye">Folga: {teamLabel(byId[m.homeId])}</li>
                 const done = hasResult(m)
+                const hw = showPts && done && m.homePoints > m.awayPoints
+                const aw = showPts && done && m.awayPoints > m.homePoints
                 return (
                   <li key={m.id} className={done ? 'done' : ''}>
                     <span className="tv-table">{m.tableNo}</span>
-                    <span className={done && m.homePoints > m.awayPoints ? 'w' : ''}>{byId[m.homeId]?.code}</span>
-                    <span className="tv-score">{done ? `${m.homePoints}–${m.awayPoints}` : 'vs'}</span>
-                    <span className={done && m.awayPoints > m.homePoints ? 'w' : ''}>{byId[m.awayId]?.code}</span>
+                    <span className={hw ? 'w' : ''}>{byId[m.homeId]?.code}</span>
+                    <span className="tv-score">{!done ? 'vs' : showPts ? `${m.homePoints}–${m.awayPoints}` : '✓'}</span>
+                    <span className={aw ? 'w' : ''}>{byId[m.awayId]?.code}</span>
                   </li>
                 )
               })}
             </ol>
-            <p className="tv-legend">Mesa, equipa, pontos, equipa</p>
+            <p className="tv-legend">{showPts ? 'Mesa, equipa, pontos, equipa' : 'Mesa e equipas. ✓ = resultado entregue'}</p>
           </section>
         )}
       </div>

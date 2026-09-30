@@ -25,6 +25,7 @@ export default function SettingsTab({ tournament }) {
     try {
       const settings = {
         ...s,
+        tvShowPoints: !!tournament.settings.tvShowPoints,
         dates: s.dates.filter(Boolean).sort(),
         pointsPerGame: Number(s.pointsPerGame) || 120,
         gamesPerRound: Number(s.gamesPerRound) || 4,

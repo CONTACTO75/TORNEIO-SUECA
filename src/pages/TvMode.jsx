@@ -1,6 +1,7 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { useTournamentData } from '../hooks/useTournament'
+import { useAuth, useTournamentData } from '../hooks/useTournament'
+import { setTvPoints } from '../lib/tournamentActions'
 import { computeStandings } from '../lib/standings'
 import { currentRound, hasResult, progress, roundNumbers } from '../lib/schedule'
 import { playersOf, teamLabel } from '../lib/format'
@@ -23,6 +24,8 @@ export default function TvMode() {
   const q = useTournamentData(tid)
   const now = useClock()
   const [page, setPage] = useState(0)
+  const user = useAuth()
+  const [busy, setBusy] = useState(false)
 
   useEffect(() => {
     document.body.classList.add('tv-body')
@@ -41,6 +44,16 @@ export default function TvMode() {
     return () => clearInterval(t)
   }, [pages])
 
+  // Atalho: tecla P mostra/oculta os pontos (funciona em ecrã inteiro).
+  const toggleRef = useRef(null)
+  useEffect(() => {
+    const onKey = (e) => {
+      if ((e.key === 'p' || e.key === 'P') && !e.ctrlKey && !e.metaKey && !e.altKey) toggleRef.current?.()
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [])
+
   if (q.loading) return <Loading />
   if (q.error) return <ErrorBox error={q.error} />
   if (!data?.tournament) return <NotFound title="Este torneio não existe." />
@@ -56,17 +69,39 @@ export default function TvMode() {
   const roundMatches = matches.filter((m) => m.round === cur).sort((a, b) => (a.tableNo ?? 999) - (b.tableNo ?? 999))
   const visible = rows.slice((page % pages) * ROWS_PER_PAGE, (page % pages + 1) * ROWS_PER_PAGE)
 
+  const togglePoints = async () => {
+    if (!user || busy) return
+    setBusy(true)
+    try {
+      await setTvPoints(tournament, !showPts)
+    } catch (err) {
+      window.alert(`Não foi possível mudar: ${err.message}`)
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  toggleRef.current = togglePoints
+
   const goFull = () => document.documentElement.requestFullscreen?.().catch(() => {})
 
   return (
     <div className="tv">
       <header className="tv-head">
-        <h1>{tournament.name}</h1>
+        <div className="tv-brand">
+          {tournament.settings.logo && <img className="tv-logo" src={tournament.settings.logo} alt="" />}
+          <h1>{tournament.name}</h1>
+        </div>
         <div className="tv-meta">
           {rounds.length > 0 && (
             <span className="tv-round">{finished ? 'Classificação final' : `Jornada ${cur} de ${rounds.length}`}</span>
           )}
           <span className="tv-clock">{now.toLocaleTimeString('pt-PT', { hour: '2-digit', minute: '2-digit' })}</span>
+          {user && (
+            <button type="button" className="tv-btn tv-btn-points" onClick={togglePoints} disabled={busy} aria-pressed={showPts}>
+              {showPts ? 'Ocultar pontos' : 'Mostrar pontos'}
+            </button>
+          )}
           <button type="button" className="tv-btn" onClick={goFull}>Ecrã inteiro</button>
           <Link className="tv-btn" to={`/t/${tid}`}>Sair</Link>
         </div>

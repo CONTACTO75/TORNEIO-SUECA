@@ -19,9 +19,12 @@ export default function PublicLayout() {
     <div className="shell">
       <header className="site-head">
         <div className="wrap head-row">
-          <div className="head-title">
-            <h1 className="t-name">{t.name}</h1>
-            {meta && <p className="t-meta">{meta}</p>}
+          <div className="head-title head-brand">
+            {s.logo && <img className="head-logo" src={s.logo} alt="" />}
+            <div>
+              <h1 className="t-name">{t.name}</h1>
+              {meta && <p className="t-meta">{meta}</p>}
+            </div>
           </div>
           <nav className="nav" aria-label="Secções">
             <NavLink end to={`/t/${tid}`}>Classificação</NavLink>

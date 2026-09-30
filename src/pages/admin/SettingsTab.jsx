@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { db } from '../../lib/db'
 import { PRIZE_PLACES, TIEBREAKERS, pointsPerRound } from '../../lib/defaults'
+import { prepareLogo } from '../../lib/image'
+import { setLogo } from '../../lib/tournamentActions'
 
 export default function SettingsTab({ tournament }) {
   const nav = useNavigate()
@@ -9,6 +11,32 @@ export default function SettingsTab({ tournament }) {
   const [isActive, setIsActive] = useState(tournament.isActive)
   const [s, setS] = useState(() => structuredClone(tournament.settings))
   const [state, setState] = useState(null)
+  const [logoState, setLogoState] = useState(null)
+  const logo = tournament.settings.logo
+
+  // O logotipo é guardado logo ao escolher (não precisa de "Guardar definições").
+  async function onLogo(e) {
+    const file = e.target.files?.[0]
+    e.target.value = ''
+    if (!file) return
+    setLogoState('busy')
+    try {
+      await setLogo(tournament, await prepareLogo(file))
+      setLogoState(null)
+    } catch (err) {
+      setLogoState(err.message)
+    }
+  }
+  async function removeLogo() {
+    if (!window.confirm('Remover o logotipo?')) return
+    setLogoState('busy')
+    try {
+      await setLogo(tournament, null)
+      setLogoState(null)
+    } catch (err) {
+      setLogoState(err.message)
+    }
+  }
   const set = (k) => (e) => setS({ ...s, [k]: e.target.value })
 
   const tb = s.tiebreakers || []
@@ -26,6 +54,7 @@ export default function SettingsTab({ tournament }) {
       const settings = {
         ...s,
         tvShowPoints: !!tournament.settings.tvShowPoints,
+        logo: tournament.settings.logo || null,
         dates: s.dates.filter(Boolean).sort(),
         pointsPerGame: Number(s.pointsPerGame) || 120,
         gamesPerRound: Number(s.gamesPerRound) || 4,
@@ -56,6 +85,27 @@ export default function SettingsTab({ tournament }) {
           <input type="checkbox" checked={isActive} onChange={(e) => setIsActive(e.target.checked)} />
           Mostrar este torneio na página inicial (só um de cada vez)
         </label>
+      </div>
+
+      <div className="panel">
+        <h3>Logotipo</h3>
+        <div className="logo-row">
+          <div className="logo-preview" aria-hidden={!logo}>
+            {logo ? <img src={logo} alt="Logotipo atual" /> : <span className="muted small">Sem logotipo</span>}
+          </div>
+          <div>
+            <label className="btn">
+              {logoState === 'busy' ? 'A guardar…' : logo ? 'Trocar logotipo' : 'Escolher imagem'}
+              <input type="file" accept="image/*" className="visually-hidden" onChange={onLogo} disabled={logoState === 'busy'} />
+            </label>
+            {logo && <button type="button" className="btn ghost small danger" onClick={removeLogo}>Remover</button>}
+            <p className="small muted">
+              PNG com fundo transparente fica melhor. Aparece no topo do site, no ecrã TV e nas folhas de jogo.
+              É guardado logo, sem precisar de carregar em Guardar.
+            </p>
+            {logoState && logoState !== 'busy' && <p className="form-error" role="alert">{logoState}</p>}
+          </div>
+        </div>
       </div>
 
       <div className="panel">

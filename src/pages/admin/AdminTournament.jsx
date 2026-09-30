@@ -1,6 +1,6 @@
 import { Link, useParams, useSearchParams } from 'react-router-dom'
 import { useState } from 'react'
-import { db } from '../../lib/db'
+import { setTvPoints } from '../../lib/tournamentActions'
 import { useAuth, useTournamentData } from '../../hooks/useTournament'
 import { ErrorBox, Loading, NotFound } from '../../components/Status'
 import AdminBar from './AdminBar'
@@ -25,7 +25,7 @@ function TvPointsToggle({ tournament }) {
     if (!shown && !window.confirm('Mostrar os pontos no ecrã da TV?')) return
     setBusy(true)
     try {
-      await db.saveTournament({ ...tournament, settings: { ...tournament.settings, tvShowPoints: !shown } })
+      await setTvPoints(tournament, !shown)
     } catch (err) {
       window.alert(`Não foi possível mudar: ${err.message}`)
     } finally {

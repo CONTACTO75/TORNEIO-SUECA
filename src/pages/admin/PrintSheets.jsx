@@ -47,7 +47,10 @@ export default function PrintSheets() {
                 <strong>Folha de jogo</strong>
                 <span>Jornada {m.round}, mesa {m.tableNo}</span>
               </header>
-              <p className="gs-t">{tournament.name}</p>
+              <p className="gs-t">
+                {s.logo && <img className="gs-logo" src={s.logo} alt="" />}
+                {tournament.name}
+              </p>
               <table>
                 <thead>
                   <tr>

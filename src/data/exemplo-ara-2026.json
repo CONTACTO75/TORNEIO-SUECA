@@ -1,0 +1,1082 @@
+{
+ "name": "Torneio de Sueca A.R.A. 2026",
+ "settings": {
+  "organizer": "Associação Recreativa Andrinense",
+  "venue": "",
+  "dates": [
+   "2026-02-27",
+   "2026-03-06"
+  ],
+  "startTime": "20:00",
+  "pointsPerGame": 120,
+  "gamesPerRound": 4,
+  "roundsPerDay": "",
+  "tiebreakers": [
+   "h2h",
+   "wins",
+   "best"
+  ],
+  "prizes": [
+   {
+    "place": "1",
+    "label": "Bacalhau"
+   },
+   {
+    "place": "2",
+    "label": "Queijo"
+   },
+   {
+    "place": "3",
+    "label": "Garrafa de vinho"
+   },
+   {
+    "place": "last",
+    "label": "Prémio surpresa"
+   }
+  ]
+ },
+ "teams": [
+  {
+   "code": "A",
+   "player1": "André Santos",
+   "player2": "Edgar Rodrigues"
+  },
+  {
+   "code": "B",
+   "player1": "Luis Sousa",
+   "player2": "Mario Beliz"
+  },
+  {
+   "code": "C",
+   "player1": "Arlindo Ferreira",
+   "player2": "Gonçalo Vieira"
+  },
+  {
+   "code": "D",
+   "player1": "Cristóvão",
+   "player2": "Luís Francisco"
+  },
+  {
+   "code": "E",
+   "player1": "André Rodrigues",
+   "player2": "Nuno Craveiro"
+  },
+  {
+   "code": "F",
+   "player1": "João Clemente",
+   "player2": "Vitor Santos"
+  },
+  {
+   "code": "G",
+   "player1": "Frederico Serradas",
+   "player2": "Andreia Marques"
+  },
+  {
+   "code": "H",
+   "player1": "Olívio",
+   "player2": "Ribeiro"
+  },
+  {
+   "code": "I",
+   "player1": "Júlio Serradas",
+   "player2": "Fernando Antunes"
+  },
+  {
+   "code": "J",
+   "player1": "Michael",
+   "player2": "Rui Lopes"
+  },
+  {
+   "code": "K",
+   "player1": "Timóteo",
+   "player2": "Manuel Bento"
+  },
+  {
+   "code": "L",
+   "player1": "David",
+   "player2": "Cristóvão"
+  },
+  {
+   "code": "M",
+   "player1": "Luís Ferreira",
+   "player2": "Luísa Lopes"
+  },
+  {
+   "code": "N",
+   "player1": "Nelson Henriques",
+   "player2": "Bruno Moniz"
+  },
+  {
+   "code": "O",
+   "player1": "Ricardo",
+   "player2": "Márcia Miranda"
+  },
+  {
+   "code": "P",
+   "player1": "Fernando Jorge",
+   "player2": "Tomás"
+  }
+ ],
+ "matches": [
+  {
+   "round": 1,
+   "tableNo": 1,
+   "home": "A",
+   "away": "P",
+   "homePoints": 154,
+   "awayPoints": 326
+  },
+  {
+   "round": 1,
+   "tableNo": 2,
+   "home": "B",
+   "away": "O",
+   "homePoints": 214,
+   "awayPoints": 266
+  },
+  {
+   "round": 1,
+   "tableNo": 3,
+   "home": "C",
+   "away": "N",
+   "homePoints": 281,
+   "awayPoints": 199
+  },
+  {
+   "round": 1,
+   "tableNo": 4,
+   "home": "D",
+   "away": "M",
+   "homePoints": 287,
+   "awayPoints": 193
+  },
+  {
+   "round": 1,
+   "tableNo": 5,
+   "home": "E",
+   "away": "L",
+   "homePoints": 192,
+   "awayPoints": 288
+  },
+  {
+   "round": 1,
+   "tableNo": 6,
+   "home": "F",
+   "away": "K",
+   "homePoints": 178,
+   "awayPoints": 302
+  },
+  {
+   "round": 1,
+   "tableNo": 7,
+   "home": "G",
+   "away": "J",
+   "homePoints": 219,
+   "awayPoints": 261
+  },
+  {
+   "round": 1,
+   "tableNo": 8,
+   "home": "H",
+   "away": "I",
+   "homePoints": 286,
+   "awayPoints": 194
+  },
+  {
+   "round": 2,
+   "tableNo": 1,
+   "home": "A",
+   "away": "O",
+   "homePoints": 236,
+   "awayPoints": 244
+  },
+  {
+   "round": 2,
+   "tableNo": 2,
+   "home": "P",
+   "away": "N",
+   "homePoints": 259,
+   "awayPoints": 221
+  },
+  {
+   "round": 2,
+   "tableNo": 3,
+   "home": "B",
+   "away": "M",
+   "homePoints": 311,
+   "awayPoints": 169
+  },
+  {
+   "round": 2,
+   "tableNo": 4,
+   "home": "C",
+   "away": "L",
+   "homePoints": 232,
+   "awayPoints": 248
+  },
+  {
+   "round": 2,
+   "tableNo": 5,
+   "home": "D",
+   "away": "K",
+   "homePoints": 239,
+   "awayPoints": 241
+  },
+  {
+   "round": 2,
+   "tableNo": 6,
+   "home": "E",
+   "away": "J",
+   "homePoints": 241,
+   "awayPoints": 239
+  },
+  {
+   "round": 2,
+   "tableNo": 7,
+   "home": "F",
+   "away": "I",
+   "homePoints": 245,
+   "awayPoints": 235
+  },
+  {
+   "round": 2,
+   "tableNo": 8,
+   "home": "G",
+   "away": "H",
+   "homePoints": 267,
+   "awayPoints": 213
+  },
+  {
+   "round": 3,
+   "tableNo": 1,
+   "home": "A",
+   "away": "N",
+   "homePoints": 314,
+   "awayPoints": 166
+  },
+  {
+   "round": 3,
+   "tableNo": 2,
+   "home": "O",
+   "away": "M",
+   "homePoints": 297,
+   "awayPoints": 183
+  },
+  {
+   "round": 3,
+   "tableNo": 3,
+   "home": "P",
+   "away": "L",
+   "homePoints": 134,
+   "awayPoints": 346
+  },
+  {
+   "round": 3,
+   "tableNo": 4,
+   "home": "B",
+   "away": "K",
+   "homePoints": 224,
+   "awayPoints": 256
+  },
+  {
+   "round": 3,
+   "tableNo": 5,
+   "home": "C",
+   "away": "J",
+   "homePoints": 346,
+   "awayPoints": 134
+  },
+  {
+   "round": 3,
+   "tableNo": 6,
+   "home": "D",
+   "away": "I",
+   "homePoints": 250,
+   "awayPoints": 230
+  },
+  {
+   "round": 3,
+   "tableNo": 7,
+   "home": "E",
+   "away": "H",
+   "homePoints": 165,
+   "awayPoints": 315
+  },
+  {
+   "round": 3,
+   "tableNo": 8,
+   "home": "F",
+   "away": "G",
+   "homePoints": 272,
+   "awayPoints": 208
+  },
+  {
+   "round": 4,
+   "tableNo": 1,
+   "home": "A",
+   "away": "M",
+   "homePoints": 202,
+   "awayPoints": 278
+  },
+  {
+   "round": 4,
+   "tableNo": 2,
+   "home": "N",
+   "away": "L",
+   "homePoints": 205,
+   "awayPoints": 275
+  },
+  {
+   "round": 4,
+   "tableNo": 3,
+   "home": "O",
+   "away": "K",
+   "homePoints": 331,
+   "awayPoints": 149
+  },
+  {
+   "round": 4,
+   "tableNo": 4,
+   "home": "P",
+   "away": "J",
+   "homePoints": 205,
+   "awayPoints": 275
+  },
+  {
+   "round": 4,
+   "tableNo": 5,
+   "home": "B",
+   "away": "I",
+   "homePoints": 286,
+   "awayPoints": 194
+  },
+  {
+   "round": 4,
+   "tableNo": 6,
+   "home": "C",
+   "away": "H",
+   "homePoints": 238,
+   "awayPoints": 242
+  },
+  {
+   "round": 4,
+   "tableNo": 7,
+   "home": "D",
+   "away": "G",
+   "homePoints": 194,
+   "awayPoints": 286
+  },
+  {
+   "round": 4,
+   "tableNo": 8,
+   "home": "E",
+   "away": "F",
+   "homePoints": 240,
+   "awayPoints": 240
+  },
+  {
+   "round": 5,
+   "tableNo": 1,
+   "home": "A",
+   "away": "L",
+   "homePoints": 216,
+   "awayPoints": 264
+  },
+  {
+   "round": 5,
+   "tableNo": 2,
+   "home": "M",
+   "away": "K",
+   "homePoints": 204,
+   "awayPoints": 276
+  },
+  {
+   "round": 5,
+   "tableNo": 3,
+   "home": "N",
+   "away": "J",
+   "homePoints": 242,
+   "awayPoints": 238
+  },
+  {
+   "round": 5,
+   "tableNo": 4,
+   "home": "O",
+   "away": "I",
+   "homePoints": 284,
+   "awayPoints": 196
+  },
+  {
+   "round": 5,
+   "tableNo": 5,
+   "home": "P",
+   "away": "H",
+   "homePoints": 186,
+   "awayPoints": 294
+  },
+  {
+   "round": 5,
+   "tableNo": 6,
+   "home": "B",
+   "away": "G",
+   "homePoints": 211,
+   "awayPoints": 269
+  },
+  {
+   "round": 5,
+   "tableNo": 7,
+   "home": "C",
+   "away": "F",
+   "homePoints": 240,
+   "awayPoints": 240
+  },
+  {
+   "round": 5,
+   "tableNo": 8,
+   "home": "D",
+   "away": "E",
+   "homePoints": 259,
+   "awayPoints": 221
+  },
+  {
+   "round": 6,
+   "tableNo": 1,
+   "home": "A",
+   "away": "K",
+   "homePoints": 172,
+   "awayPoints": 308
+  },
+  {
+   "round": 6,
+   "tableNo": 2,
+   "home": "L",
+   "away": "J",
+   "homePoints": 296,
+   "awayPoints": 184
+  },
+  {
+   "round": 6,
+   "tableNo": 3,
+   "home": "M",
+   "away": "I",
+   "homePoints": 223,
+   "awayPoints": 257
+  },
+  {
+   "round": 6,
+   "tableNo": 4,
+   "home": "N",
+   "away": "H",
+   "homePoints": 190,
+   "awayPoints": 290
+  },
+  {
+   "round": 6,
+   "tableNo": 5,
+   "home": "O",
+   "away": "G",
+   "homePoints": 316,
+   "awayPoints": 164
+  },
+  {
+   "round": 6,
+   "tableNo": 6,
+   "home": "P",
+   "away": "F",
+   "homePoints": 163,
+   "awayPoints": 317
+  },
+  {
+   "round": 6,
+   "tableNo": 7,
+   "home": "B",
+   "away": "E",
+   "homePoints": 265,
+   "awayPoints": 215
+  },
+  {
+   "round": 6,
+   "tableNo": 8,
+   "home": "C",
+   "away": "D",
+   "homePoints": 205,
+   "awayPoints": 275
+  },
+  {
+   "round": 7,
+   "tableNo": 1,
+   "home": "A",
+   "away": "J",
+   "homePoints": 311,
+   "awayPoints": 169
+  },
+  {
+   "round": 7,
+   "tableNo": 2,
+   "home": "K",
+   "away": "I",
+   "homePoints": 318,
+   "awayPoints": 162
+  },
+  {
+   "round": 7,
+   "tableNo": 3,
+   "home": "L",
+   "away": "H",
+   "homePoints": 202,
+   "awayPoints": 278
+  },
+  {
+   "round": 7,
+   "tableNo": 4,
+   "home": "M",
+   "away": "G",
+   "homePoints": 234,
+   "awayPoints": 246
+  },
+  {
+   "round": 7,
+   "tableNo": 5,
+   "home": "N",
+   "away": "F",
+   "homePoints": 263,
+   "awayPoints": 217
+  },
+  {
+   "round": 7,
+   "tableNo": 6,
+   "home": "O",
+   "away": "E",
+   "homePoints": 231,
+   "awayPoints": 249
+  },
+  {
+   "round": 7,
+   "tableNo": 7,
+   "home": "P",
+   "away": "D",
+   "homePoints": 244,
+   "awayPoints": 236
+  },
+  {
+   "round": 7,
+   "tableNo": 8,
+   "home": "B",
+   "away": "C",
+   "homePoints": 170,
+   "awayPoints": 310
+  },
+  {
+   "round": 8,
+   "tableNo": 1,
+   "home": "A",
+   "away": "I",
+   "homePoints": 308,
+   "awayPoints": 172
+  },
+  {
+   "round": 8,
+   "tableNo": 2,
+   "home": "J",
+   "away": "H",
+   "homePoints": 276,
+   "awayPoints": 204
+  },
+  {
+   "round": 8,
+   "tableNo": 3,
+   "home": "K",
+   "away": "G",
+   "homePoints": 249,
+   "awayPoints": 231
+  },
+  {
+   "round": 8,
+   "tableNo": 4,
+   "home": "L",
+   "away": "F",
+   "homePoints": 198,
+   "awayPoints": 282
+  },
+  {
+   "round": 8,
+   "tableNo": 5,
+   "home": "M",
+   "away": "E",
+   "homePoints": 260,
+   "awayPoints": 220
+  },
+  {
+   "round": 8,
+   "tableNo": 6,
+   "home": "N",
+   "away": "D",
+   "homePoints": 97,
+   "awayPoints": 383
+  },
+  {
+   "round": 8,
+   "tableNo": 7,
+   "home": "O",
+   "away": "C",
+   "homePoints": 186,
+   "awayPoints": 294
+  },
+  {
+   "round": 8,
+   "tableNo": 8,
+   "home": "P",
+   "away": "B",
+   "homePoints": 166,
+   "awayPoints": 314
+  },
+  {
+   "round": 9,
+   "tableNo": 1,
+   "home": "A",
+   "away": "H",
+   "homePoints": 194,
+   "awayPoints": 286
+  },
+  {
+   "round": 9,
+   "tableNo": 2,
+   "home": "I",
+   "away": "G",
+   "homePoints": 258,
+   "awayPoints": 222
+  },
+  {
+   "round": 9,
+   "tableNo": 3,
+   "home": "J",
+   "away": "F",
+   "homePoints": 280,
+   "awayPoints": 200
+  },
+  {
+   "round": 9,
+   "tableNo": 4,
+   "home": "K",
+   "away": "E",
+   "homePoints": 375,
+   "awayPoints": 105
+  },
+  {
+   "round": 9,
+   "tableNo": 5,
+   "home": "L",
+   "away": "D",
+   "homePoints": 159,
+   "awayPoints": 321
+  },
+  {
+   "round": 9,
+   "tableNo": 6,
+   "home": "M",
+   "away": "C",
+   "homePoints": 288,
+   "awayPoints": 192
+  },
+  {
+   "round": 9,
+   "tableNo": 7,
+   "home": "N",
+   "away": "B",
+   "homePoints": 151,
+   "awayPoints": 329
+  },
+  {
+   "round": 9,
+   "tableNo": 8,
+   "home": "O",
+   "away": "P",
+   "homePoints": 271,
+   "awayPoints": 209
+  },
+  {
+   "round": 10,
+   "tableNo": 1,
+   "home": "A",
+   "away": "G",
+   "homePoints": 257,
+   "awayPoints": 223
+  },
+  {
+   "round": 10,
+   "tableNo": 2,
+   "home": "H",
+   "away": "F",
+   "homePoints": 224,
+   "awayPoints": 256
+  },
+  {
+   "round": 10,
+   "tableNo": 3,
+   "home": "I",
+   "away": "E",
+   "homePoints": 267,
+   "awayPoints": 213
+  },
+  {
+   "round": 10,
+   "tableNo": 4,
+   "home": "J",
+   "away": "D",
+   "homePoints": 287,
+   "awayPoints": 193
+  },
+  {
+   "round": 10,
+   "tableNo": 5,
+   "home": "K",
+   "away": "C",
+   "homePoints": 242,
+   "awayPoints": 238
+  },
+  {
+   "round": 10,
+   "tableNo": 6,
+   "home": "L",
+   "away": "B",
+   "homePoints": 228,
+   "awayPoints": 252
+  },
+  {
+   "round": 10,
+   "tableNo": 7,
+   "home": "M",
+   "away": "P",
+   "homePoints": 162,
+   "awayPoints": 318
+  },
+  {
+   "round": 10,
+   "tableNo": 8,
+   "home": "N",
+   "away": "O",
+   "homePoints": 241,
+   "awayPoints": 239
+  },
+  {
+   "round": 11,
+   "tableNo": 1,
+   "home": "A",
+   "away": "F",
+   "homePoints": 219,
+   "awayPoints": 261
+  },
+  {
+   "round": 11,
+   "tableNo": 2,
+   "home": "G",
+   "away": "E",
+   "homePoints": 298,
+   "awayPoints": 182
+  },
+  {
+   "round": 11,
+   "tableNo": 3,
+   "home": "H",
+   "away": "D",
+   "homePoints": 210,
+   "awayPoints": 270
+  },
+  {
+   "round": 11,
+   "tableNo": 4,
+   "home": "I",
+   "away": "C",
+   "homePoints": 214,
+   "awayPoints": 266
+  },
+  {
+   "round": 11,
+   "tableNo": 5,
+   "home": "J",
+   "away": "B",
+   "homePoints": 240,
+   "awayPoints": 240
+  },
+  {
+   "round": 11,
+   "tableNo": 6,
+   "home": "K",
+   "away": "P",
+   "homePoints": 302,
+   "awayPoints": 178
+  },
+  {
+   "round": 11,
+   "tableNo": 7,
+   "home": "L",
+   "away": "O",
+   "homePoints": 258,
+   "awayPoints": 222
+  },
+  {
+   "round": 11,
+   "tableNo": 8,
+   "home": "M",
+   "away": "N",
+   "homePoints": 334,
+   "awayPoints": 146
+  },
+  {
+   "round": 12,
+   "tableNo": 1,
+   "home": "A",
+   "away": "E",
+   "homePoints": 201,
+   "awayPoints": 279
+  },
+  {
+   "round": 12,
+   "tableNo": 2,
+   "home": "F",
+   "away": "D",
+   "homePoints": 197,
+   "awayPoints": 283
+  },
+  {
+   "round": 12,
+   "tableNo": 3,
+   "home": "G",
+   "away": "C",
+   "homePoints": 222,
+   "awayPoints": 258
+  },
+  {
+   "round": 12,
+   "tableNo": 4,
+   "home": "H",
+   "away": "B",
+   "homePoints": 308,
+   "awayPoints": 172
+  },
+  {
+   "round": 12,
+   "tableNo": 5,
+   "home": "I",
+   "away": "P",
+   "homePoints": 209,
+   "awayPoints": 271
+  },
+  {
+   "round": 12,
+   "tableNo": 6,
+   "home": "J",
+   "away": "O",
+   "homePoints": 215,
+   "awayPoints": 265
+  },
+  {
+   "round": 12,
+   "tableNo": 7,
+   "home": "K",
+   "away": "N",
+   "homePoints": 277,
+   "awayPoints": 203
+  },
+  {
+   "round": 12,
+   "tableNo": 8,
+   "home": "L",
+   "away": "M",
+   "homePoints": 252,
+   "awayPoints": 228
+  },
+  {
+   "round": 13,
+   "tableNo": 1,
+   "home": "A",
+   "away": "D",
+   "homePoints": 221,
+   "awayPoints": 259
+  },
+  {
+   "round": 13,
+   "tableNo": 2,
+   "home": "E",
+   "away": "C",
+   "homePoints": 240,
+   "awayPoints": 240
+  },
+  {
+   "round": 13,
+   "tableNo": 3,
+   "home": "F",
+   "away": "B",
+   "homePoints": 233,
+   "awayPoints": 247
+  },
+  {
+   "round": 13,
+   "tableNo": 4,
+   "home": "G",
+   "away": "P",
+   "homePoints": 255,
+   "awayPoints": 225
+  },
+  {
+   "round": 13,
+   "tableNo": 5,
+   "home": "H",
+   "away": "O",
+   "homePoints": 251,
+   "awayPoints": 229
+  },
+  {
+   "round": 13,
+   "tableNo": 6,
+   "home": "I",
+   "away": "N",
+   "homePoints": 319,
+   "awayPoints": 161
+  },
+  {
+   "round": 13,
+   "tableNo": 7,
+   "home": "J",
+   "away": "M",
+   "homePoints": 251,
+   "awayPoints": 229
+  },
+  {
+   "round": 13,
+   "tableNo": 8,
+   "home": "K",
+   "away": "L",
+   "homePoints": 222,
+   "awayPoints": 258
+  },
+  {
+   "round": 14,
+   "tableNo": 1,
+   "home": "A",
+   "away": "C",
+   "homePoints": 218,
+   "awayPoints": 262
+  },
+  {
+   "round": 14,
+   "tableNo": 2,
+   "home": "D",
+   "away": "B",
+   "homePoints": 249,
+   "awayPoints": 231
+  },
+  {
+   "round": 14,
+   "tableNo": 3,
+   "home": "E",
+   "away": "P",
+   "homePoints": 173,
+   "awayPoints": 307
+  },
+  {
+   "round": 14,
+   "tableNo": 4,
+   "home": "F",
+   "away": "O",
+   "homePoints": 215,
+   "awayPoints": 265
+  },
+  {
+   "round": 14,
+   "tableNo": 5,
+   "home": "G",
+   "away": "N",
+   "homePoints": 235,
+   "awayPoints": 245
+  },
+  {
+   "round": 14,
+   "tableNo": 6,
+   "home": "H",
+   "away": "M",
+   "homePoints": 346,
+   "awayPoints": 134
+  },
+  {
+   "round": 14,
+   "tableNo": 7,
+   "home": "I",
+   "away": "L",
+   "homePoints": 192,
+   "awayPoints": 288
+  },
+  {
+   "round": 14,
+   "tableNo": 8,
+   "home": "J",
+   "away": "K",
+   "homePoints": 241,
+   "awayPoints": 239
+  },
+  {
+   "round": 15,
+   "tableNo": 1,
+   "home": "A",
+   "away": "B",
+   "homePoints": 235,
+   "awayPoints": 245
+  },
+  {
+   "round": 15,
+   "tableNo": 2,
+   "home": "C",
+   "away": "P",
+   "homePoints": 208,
+   "awayPoints": 272
+  },
+  {
+   "round": 15,
+   "tableNo": 3,
+   "home": "D",
+   "away": "O",
+   "homePoints": 206,
+   "awayPoints": 274
+  },
+  {
+   "round": 15,
+   "tableNo": 4,
+   "home": "E",
+   "away": "N",
+   "homePoints": 156,
+   "awayPoints": 324
+  },
+  {
+   "round": 15,
+   "tableNo": 5,
+   "home": "F",
+   "away": "M",
+   "homePoints": 326,
+   "awayPoints": 154
+  },
+  {
+   "round": 15,
+   "tableNo": 6,
+   "home": "G",
+   "away": "L",
+   "homePoints": 294,
+   "awayPoints": 186
+  },
+  {
+   "round": 15,
+   "tableNo": 7,
+   "home": "H",
+   "away": "K",
+   "homePoints": 282,
+   "awayPoints": 198
+  },
+  {
+   "round": 15,
+   "tableNo": 8,
+   "home": "I",
+   "away": "J",
+   "homePoints": 279,
+   "awayPoints": 201
+  }
+ ]
+}
